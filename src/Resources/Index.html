@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Java Server</title>
-    <link rel="stylesheet" type="text/css" href="Resources/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css"/>
 </head>
 <body>
 
 <div class="jumbotron">
     <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple Java Server.</p>
+
     <hr class="my-4">
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">
-            Get Image 1
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            Get Image 2
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            Get Page
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            Error Page
-        </a>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Image</h5>
+                    <p class="card-text">Get an Image.</p>
+                    <a href="/getimage" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Page</h5>
+                    <p class="card-text">Get a Page</p>
+                    <a href="/secondpage.html" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 </div>
 
-
-
-<a href="/getimage"><button type="button">Click Me!</button> </a>
 </body>
 </html>

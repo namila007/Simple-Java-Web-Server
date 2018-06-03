@@ -7,9 +7,8 @@ import java.nio.file.Paths;
 public class Images {
 
     public static void sendImage(DataOutputStream out ) throws IOException {
-        Path path = Paths.get("Resources/design.jpg");
+        Path path = Paths.get("Resources/avatar.jpg");
         byte[] data = Files.readAllBytes(path);
-
         out.writeBytes("HTTP/1.1 200 OK\r\n");
         out.writeBytes("Content-Type: image/jpg\r\n");
         out.writeBytes("Content-length: "+data.length+"\r\n");

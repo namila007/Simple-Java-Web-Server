@@ -28,11 +28,17 @@ public class Server {
                 else if (url.equals("/favicon.ico")){
                     Images.sendFavicon(out);
                 }
-                else if(url.equals("/Resources/bootstrap.css")){
+                else if(url.equals("/bootstrap.css")){
                     Pages.sendBootstrap(out);
                 }
+                else if(url.equals("/cover.css")){
+                    Pages.sendCovercss(out);
+                }
+                else if(url.equals("/secondpage.html")){
+                    Pages.sendSecondPage(out);
+                }
                 else{
-
+                    Pages.sendErrorPage(out);
                 }
                 out.close();
 
@@ -50,7 +56,6 @@ public class Server {
 
     private String getURL(BufferedReader in) throws IOException{
         String[] url = in.readLine().split(" ");
-
         return url[1];
     }
 

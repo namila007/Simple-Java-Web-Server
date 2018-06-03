@@ -59,14 +59,15 @@ public class Worker implements Runnable {
         } catch (Exception e) {
 
             System.out.println("Error occured on Thread " + Thread.currentThread().getName() + " " + e.getMessage());
-
+            //e.printStackTrace();
         }
 
 
     }
 
 
-    private String getURL(BufferedReader in) throws IOException {
+    private synchronized String getURL(BufferedReader in) throws IOException {
+
         String[] url = in.readLine().split(" ");
         return url[1];
     }
